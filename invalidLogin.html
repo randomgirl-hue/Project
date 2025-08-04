@@ -1,0 +1,116 @@
+<html>
+
+<head>
+    <title> Invalid Log In </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/2387/2387635.png">
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        body {
+            background-image: url("wallpaper.gif");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .overlay-color {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.3);
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loginBox {
+            background-color: rgba(255, 228, 225, 0.85);
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            max-width: 90%;
+            width: 400px;
+            text-align: center;
+            font-family: 'Segoe UI', sans-serif;
+            color: #3b2e2e;
+        }
+
+        .buttonForm {
+            margin-top: 10%;
+            text-align: center;
+        }
+
+        .buttonForm input {
+            border-radius: 999px;
+            width: 45%;
+            height: 42px;
+            margin: 5px;
+            border: none;
+            box-sizing: border-box;
+            font-size: 18px;
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            line-height: 42px;
+            padding: 0;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        #tryAgain {
+            color: #3b2e2e;
+        }
+
+        #tryAgain:hover {
+            background-color: #659e85;
+            color: white;
+        }
+
+        #reset {
+            color: #3b2e2e;
+        }
+
+        #reset:hover {
+            background-color: #c94c4c;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay-color">
+        <div class="loginBox">
+            <h2>Invalid Credentials</h2>
+            <p>Please check your <strong>username</strong> or <strong>password</strong>.</p>
+
+            <div class="buttonForm">
+                <input id="tryAgain" type="submit" value="Try Again">
+                <input id="reset" type="submit" value="Reset">
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        document.getElementById("tryAgain").addEventListener("click", function () {
+            window.location.href = "login.html";
+        });
+
+        document.getElementById("reset").addEventListener("click", function () {
+            window.location.href = "reset.html"; 
+        });
+    </script>
+
+</body>
+
+</html>
